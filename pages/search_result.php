@@ -6,7 +6,7 @@
             <div class="col-md-10 mx-auto">
                 <div class="card ">
                     <div class="card-header bg-success text-white font-weight-bolder text-center">
-                        All User Info
+                        Search Result
                     </div>
                     <div class="card-body">
                         <form action="action.php" method="post">
@@ -19,6 +19,7 @@
                                 </div>
                             </div>
                         </form>
+                        <?php if (isset($result['name'])) { ?>
                         <table class="table table-bordered table-hover text-center">
                             <thead>
                             <tr>
@@ -28,17 +29,20 @@
                                 <th>Address</th>
                             </tr>
                             </thead>
+
                             <tbody>
-                            <?php foreach ($students as $student) { ?>
                             <tr class="">
-                                <td><?php echo $student['name'] ?></td>
-                                <td><?php echo $student['mobile'] ?></td>
-                                <td><?php echo $student['email'] ?></td>
-                                <td><?php echo $student['address'] ?></td>
+                                <td><?php echo $result['name'] ?></td>
+                                <td><?php echo $result['mobile'] ?></td>
+                                <td><?php echo $result['email'] ?></td>
+                                <td><?php echo $result['address'] ?></td>
                             </tr>
                             </tbody>
-                            <?php } ?>
+
                         </table>
+                        <?php } else { ?>
+                        <h1 class="text-danger text-center">Opps..........No result Found</h1>
+                        <?php } ?>
 
                     </div>
                 </div>

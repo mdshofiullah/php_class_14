@@ -19,8 +19,10 @@
         <ul class="navbar-nav">
             <li><a href="index.php" class="nav-link text-white">String</a></li>
             <li><a href="action.php?status=search" class="nav-link text-white">Search</a></li>
+
             <li><a href="" class="nav-link text-white">Series</a></li>
         </ul>
 
     </div>
 </nav>
+
